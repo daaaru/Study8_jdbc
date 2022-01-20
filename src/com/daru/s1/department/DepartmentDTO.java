@@ -1,6 +1,6 @@
 package com.daru.s1.department;
 
-public class DepartmentDTO {
+public class DepartmentDTO { //9
 	//해당테이블에있는 컬럼명과 데이터타입을 동일하게
 	private Integer department_id;
 	private String department_name;
