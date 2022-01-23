@@ -16,6 +16,28 @@ public class StratMain {
 	public static void main(String[] args) {
 		System.out.println("DB 연동 테스트시작");
 		
+		
+		FrontController frontController = new FrontController();
+		try {
+			frontController.mainStart();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+//		DepartmentControler dc = new DepartmentControler();
+//		try {
+//			dc.start();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+		
+		
+		
+		
 //		LocationDAO locationDAO = new LocationDAO();
 //		LocationView locationView = new LocationView();
 //		try {
@@ -28,21 +50,21 @@ public class StratMain {
 		
 		
 		//------ department Test-----------
-		DepartmentDAO departmentDAO = new DepartmentDAO(); //19
-//		DepartmentView departmentView = new DepartmentView();
-		
-		try {
-			DepartmentDTO departmentDTO = new DepartmentDTO();
-			departmentDTO.setDepartment_id(20);
-			departmentDTO = departmentDAO.getOne(departmentDTO);
-			//DepartmentDTO departmentDTO = departmentDAO.getOne(20);
-			System.out.println(departmentDTO.getDepartment_name());
-//			List<DepartmentDTO> ar = departmentDAO.getList(); //20
-//			departmentView.view(ar);//21
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		DepartmentDAO departmentDAO = new DepartmentDAO(); //19
+////		DepartmentView departmentView = new DepartmentView();
+//		
+//		try {
+//			DepartmentDTO departmentDTO = new DepartmentDTO();
+//			departmentDTO.setDepartment_id(20);
+//			departmentDTO = departmentDAO.getOne(departmentDTO);
+//			//DepartmentDTO departmentDTO = departmentDAO.getOne(20);
+//			System.out.println(departmentDTO.getDepartment_name());
+////			List<DepartmentDTO> ar = departmentDAO.getList(); //20
+////			departmentView.view(ar);//21
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 		System.out.println("DB 연동 테스트 끝");
 	}

@@ -37,6 +37,7 @@ public class DepartmentControler {
 				DepartmentDTO departmentDTO = new DepartmentDTO();
 				departmentDTO.setDepartment_id(sc.nextInt());
 				departmentDTO = departmentDAO.getOne(departmentDTO);
+				departmentView.view(departmentDTO);
 				break;
 			default:
 				System.out.println("종료합니다");
