@@ -1,11 +1,17 @@
 package com.daru.s1.department;
 
+import java.util.List;
+
+import com.daru.s1.employee.EmployeeDTO;
+
 public class DepartmentDTO { //9
 	//해당테이블에있는 컬럼명과 데이터타입을 동일하게
 	private Integer department_id;
 	private String department_name;
 	private Integer manager_id;
 	private Integer location_id;
+	
+	//private List<EmployeeDTO> employeeDTOs; //부서는 사람 n명을 가지고있다.
 	
 	//private경우 다른곳에서 사용하기위해서 세터게터생성
 		
