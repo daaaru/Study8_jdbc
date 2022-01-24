@@ -2,7 +2,7 @@ package com.daru.s1.start;
 
 import java.util.List;
 
-import com.daru.s1.department.DepartmentControler;
+import com.daru.s1.department.DepartmentController;
 import com.daru.s1.department.DepartmentDAO;
 import com.daru.s1.department.DepartmentDTO;
 import com.daru.s1.department.DepartmentView;
@@ -20,11 +20,10 @@ public class StratMain {
 		FrontController frontController = new FrontController();
 		try {
 			frontController.mainStart();
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+		} catch (Exception e) {
+			// TODOAuto-generated catch block
+			e.printStackTrace();
 		}
-		
 		
 //		DepartmentControler dc = new DepartmentControler();
 //		try {

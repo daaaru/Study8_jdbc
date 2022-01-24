@@ -17,7 +17,8 @@ public class DepartmentView {
 		//모두 출력
 		for(int i=0;i<ar.size();i++) { //17
 			this.view(ar.get(i));
-			
+			System.out.println("--------------------------------------------");
+		
 //			System.out.print(ar.get(i).getDepartment_id()+"\t");
 //			System.out.print(ar.get(i).getDepartment_name()+"\t");
 //			System.out.print(ar.get(i).getManager_id()+"\t");

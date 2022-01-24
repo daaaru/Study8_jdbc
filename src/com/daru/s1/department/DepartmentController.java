@@ -3,13 +3,13 @@ package com.daru.s1.department;
 import java.util.List;
 import java.util.Scanner;
 
-public class DepartmentControler {
+public class DepartmentController {
 	
 	private DepartmentDAO departmentDAO;//2
 	private DepartmentView departmentView;//3
 	private Scanner sc;//7
 	
-	public DepartmentControler() {//4
+	public DepartmentController() {//4
 
 		departmentDAO = new DepartmentDAO();//5
 		departmentView = new DepartmentView();//6

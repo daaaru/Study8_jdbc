@@ -2,19 +2,24 @@ package com.daru.s1.start;
 
 import java.util.Scanner;
 
-import com.daru.s1.department.DepartmentControler;
+import com.daru.s1.department.DepartmentController;
+import com.daru.s1.employee.EmployeeController;
+import com.daru.s1.location.LocationController;
 
 public class FrontController { //모든 컨트롤러 연결
 
 	private Scanner sc;
-	private DepartmentControler departmentControler;
+	private DepartmentController departmentControler;
+	private LocationController locationController;
+	private EmployeeController employeeController;
 	//location controller
 	//employcontroller
 	
-	private void front() {
+	private void FrontController() {
 		sc = new Scanner(System.in);
-		departmentControler = new DepartmentControler();
-		
+		departmentControler = new DepartmentController();
+		locationController = new LocationController();
+		employeeController = new EmployeeController();
 		// lo, em
 	}
 
@@ -30,12 +35,14 @@ public class FrontController { //모든 컨트롤러 연결
 			
 			switch(select) {
 			case 1:
+				employeeController.start();
 				//employeecontroller의 start 메서드 호출
 				break;
 			case 2:
 				departmentControler.start();
 				break;
 			case 3:
+				locationController.start();
 				//locationcontroller의 start메서드 호출
 				break;
 			default:
