@@ -25,6 +25,7 @@ public class EmployeeDAO {
 		PreparedStatement st = conn.prepareStatement(sql);
 		
 		st.setInt(1, emp.getEmployee_id());
+		
 		ResultSet rs = st.executeQuery();
 		
 		

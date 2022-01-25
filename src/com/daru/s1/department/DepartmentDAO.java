@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.daru.s1.regions.RegionDTO;
 import com.daru.s1.util.DBConnector;
 
 public class DepartmentDAO { //여기서만 DB에 접속
@@ -16,6 +17,51 @@ public class DepartmentDAO { //여기서만 DB에 접속
 			dbConnector = new DBConnector();
 	
 	}
+	
+	//insert
+	public int setInsert(DepartmentDTO departmentDTO)throws Exception {
+		//1 연결
+		Connection con = dbConnector.getConnect();
+		//2 sql query문
+		String sql = "INSERT INTO DEPARTMENTS (DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID) VALLUES (DEPARTMENTS_SEQ.NEXTVAL, ?, ?, ?)";
+		//3 미리전송
+		PreparedStatement st = con.prepareStatement(sql);
+		
+		//4 ?
+//		st.setLong(1, departmentDTO.getDepartment_id());
+		st.setString(1, departmentDTO.getDepartment_name());
+		st.setLong(2, departmentDTO.getManager_id());
+		st.setLong(3, departmentDTO.getLocation_id());
+		
+		//5
+		int result = st.executeUpdate();
+		
+		//6
+		st.close();
+		con.close();
+		
+		return result;
+	}
+	//delete
+	public int setDelet(DepartmentDTO departmentDTO) throws Exception {
+		//1.
+		Connection con = dbConnector.getConnect();
+		//2 SQL
+		String sql = "DELETE DEPARTMENTS WHERE DEPARTMENT_ID = ? ";
+		//3.미리전송
+		PreparedStatement st = con.prepareStatement(sql);
+		//4. ?
+		st.setLong(1, departmentDTO.getDepartment_id());
+		//5
+		int result = st.executeUpdate();
+		//6
+		st.close();
+		con.close();
+		
+		return result;
+	}
+	
+	
 	
 	//부서정보, 부서에 근무하는 사원들의 정보
 	public void getDEP_EMPList() throws Exception {
