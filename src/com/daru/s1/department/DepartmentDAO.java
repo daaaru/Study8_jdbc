@@ -17,7 +17,6 @@ public class DepartmentDAO { //여기서만 DB에 접속
 			dbConnector = new DBConnector();
 	
 	}
-	
 	//insert
 	public int setInsert(DepartmentDTO departmentDTO)throws Exception {
 		//1 연결
